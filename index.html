@@ -3,25 +3,19 @@ layout: default
 title: Início
 ---
 <section class="w3-row">
-    <article class="w3-container w3-padding w3-twothird">
-        <article class="w3-card w3-hover-shadow w3-margin-bottom">
-            <header class="w3-container w3-padding w3-theme-light w3-xlarge">
-                Resumo
-            </header>
-            <section class="w3-container">
-                Arquiteto de Sistemas Sênior, com conhecimento em Java e C/C++. Experiência em grandes projetos
-                da cidade de São Paulo na área de Mobilidade Urbana. Lider e motivador de equipe, trabalho em 
-                todas as fases do projeto, apoiando também a etapa de desenvolvimento.
-            </section>
-        </article>
-    </article>
+    <section class="w3-container w3-padding w3-twothird">
+        {% assign posts = site.posts | sort: 'date' %}
+        {% for post in posts %}
+            {% include post.html %}
+        {% endfor %}
+    </section>
 
-    <article class="w3-container w3-padding w3-third">
-        <div class="w3-card w3-hover-shadow">
+    <section class="w3-container w3-padding w3-third">
+        <article class="w3-card w3-hover-shadow">
             <header class="w3-container w3-padding w3-theme-dark w3-center">
                 <img src="images/linkedin.png" alt="linkedin">
             </header>
-            <div class="w3-container w3-padding w3-center w3-theme-l1 w3-small">
+            <section class="w3-container w3-padding w3-center w3-theme-l1 w3-small">
                 <img src="images/luciano.jpg" class="avatar" width="50px" alt="avatar">
                 <p>
                     <a href="https://www.linkedin.com/in/luciano-rodrigues" class="w3-medium" style="font-weight: bold;">Luciano Vieira Rodrigues</a><br>
@@ -32,7 +26,7 @@ title: Início
                 </p>
                 <a href="https://www.linkedin.com/in/luciano-rodrigues" style="font-weight: bold;"
                     class="w3-button w3-round-xxlarge w3-theme-dark w3-border">Visualizar Perfil</a>
-            </div>
-        </div>
-    </article>
+            </section>
+        </article>
+    </section>
 </section>
