@@ -1,1 +1,34 @@
-theme: jekyll-theme-slate
+title: Luciano Vieira Rodrigues
+email: lvrodriguesline@gmail.com
+description: >- # this means to ignore newlines until "baseurl:"
+  Solução e inovação, sempre presente!
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "https://lvrodrigues.github.io" # the base hostname & protocol for your site, e.g. http://example.com
+#twitter_username: jekyllrb
+github_username: LVRodrigues
+
+
+# Build settings
+theme: minima
+plugins:
+  - jekyll-feed
+  - jekyll-gist
+  - jekyll-github-metadata
+
+lsi: false
+safe: true
+#source: https://github.com/LVRodrigues/repository.git
+incremental: false
+highlighter: rouge
+gist:
+  noscript: false
+kramdown:
+  math_engine: mathjax
+  syntax_highlighter: rouge
+
+defaults:
+  scope:
+    path: ""
+    type: posts
+  values:
+    layout: post

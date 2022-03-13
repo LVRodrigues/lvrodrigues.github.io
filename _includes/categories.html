@@ -1,0 +1,20 @@
+<div class="w3-card">
+    <header class="w3-container w3-padding w3-theme">
+        Categorias
+    </header>
+    <nav class="w3-bar-block">
+        {% if include.selected == "Todas" %}
+            <span class="w3-bar-item w3-theme-l1">Todas</span>
+        {% else %}
+            <a class="w3-bar-item w3-button" href="{{ site.baseurl }}/">Todas</a>
+        {% endif %}
+        {% for category in site.categories %}
+            {% assign item = category | first %}
+            {% if include.selected == item %}
+                <span class="w3-bar-item w3-theme-l1">{{ item }}</span>
+            {% else %}
+                <a class="w3-bar-item w3-button" href="{{ site.baseurl }}/category/{{ item }}">{{ item }}</a>
+            {% endif %}
+        {% endfor %}
+    </nav>
+</div>
